@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Listado de Post</h1>
+{% extends '_base.html' %}
+
+{% block content %}
     {% for publication in post_list %}
         <ul>
             <li>
-                <a href="{% url 'post-detail' publication.pk %}"><h2>{{ publication.title }}</h2></a>
+                <a href="{% url 'post-detail' publication.id %}"><h2>{{ publication.title }}</h2></a>
                 <p>{{ publication.author }}</p>
             </li>
 
         </ul>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}
