@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 
 {% block content %}
+<a href="{% url 'post-edit' post.id %}"><h2>Editar Post</h2></a>
     <h2>Detalles del post</h2>
     <h3>{{ post.title  }}</h3>
     <p>{{ post.author }}</p>
