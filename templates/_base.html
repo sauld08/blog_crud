@@ -11,6 +11,7 @@
     <a href="{% url 'post_list' %}"><h1>blog personal</h1></a>
     <a href="{% url 'post-new' %}"><h1>Crear post</h1></a>
     <a href="{% url 'login' %}">iniciar sesion</a>
+    <a href="{% url 'signup' %}">Registrate</a>
     {% if user.is_authenticated %}
         <p>Hola, {{ user.username }}
         <form action="{% url 'logout' %}" method="post">
