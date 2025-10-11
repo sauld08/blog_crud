@@ -7,7 +7,10 @@
     <p>{{ post.author }}</p>
     <p>{{ post.body }}</p>
     <p>{{ post.created_at }}</p>
+
+{% if post.author.pk == request.user.pk %}
 <a href="{% url 'post-edit' post.id %}"><p>Editar Post</p></a>
 <a href="{% url 'post-delete' post.id %}"><p>Eliminar Post</p></a>
+{% endif %}
 
 {% endblock content %}
